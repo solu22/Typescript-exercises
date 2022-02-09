@@ -8,7 +8,7 @@ interface Result_Object {
   average: number;
 }
 
-const calculateExercise = (
+export const calculateExercise = (
   daily_exercise_hours: Array<number>,
   target: number
 ): Result_Object => {
@@ -44,7 +44,7 @@ const target = Number(process.argv[2]);
 const data = argv.map((d) => Number(d));
 
 try {
-  console.log(calculateExercise(data, target));
+  (calculateExercise(data, target));
 } catch (error: unknown) {
   let errorMessage = "";
   if (error instanceof Error) {
