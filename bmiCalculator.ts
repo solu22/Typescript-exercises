@@ -1,7 +1,7 @@
 type bmiMsg = string;
 let msg = "";
 
-const calculateBmi = (height: number, weight: number): bmiMsg => {
+export const calculateBmi = (height: number, weight: number): bmiMsg => {
   const bmiResult = weight / ((height * 0.01) ^ 2);
 
   if (bmiResult < 18.5) return (msg += "Underweight");
